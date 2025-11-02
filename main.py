@@ -6,7 +6,7 @@ def load_data(): #loading patient data
         data=json.load(f)
     return data
 
-@app.get("/intro") 
+@app.get("/") 
 def hello():
     return {"message":"PATIENT MANAGEMENT API SYSTEM  "}
 
