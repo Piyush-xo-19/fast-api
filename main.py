@@ -18,3 +18,11 @@ def about():
 def view():
     
     return load_data()
+
+@app.get("/patient/{patient_id}")
+def view_patient(patient_id:str):
+    data=load_data()
+    if patient_id in data:
+        return data[patient_id]
+    else:
+        return{"message":"patient id not found enter a valid patient id "}
