@@ -1,4 +1,4 @@
-from fastapi import FastAPI,Path,HTTPException
+from fastapi import FastAPI,Path,HTTPException,Query
 import json
 app=FastAPI()
 def load_data(): #loading patient data 
@@ -26,3 +26,17 @@ def view_patient(patient_id:str=Path(... ,description="ID OF THE PATIENT IN DB "
         return data[patient_id]
     else:
         raise HTTPException(status_code=400,detail="Patient not found")
+
+#query parameters 
+@app.get("/sort")
+def sorted_patients(sortby:str=Query(...,description="sort on the basis of height . weight and bmi "),Order:str=Query(..., description="ASCENDING OR DESCENDING" )):
+    valid_sort=["weight","height","bmi"]
+    valid_order=["ascending","descending"]
+    if sortby not in valid_sort:
+        raise HTTPException(status_code=400,detail=" INVALID QUERY") 
+    if Order not in valid_order:
+        raise HTTPException(status_code=400,detail="ENTER A VALID ORDER")
+    data=load_data()
+    sorted_order= True if Order=="descending" else False
+    sorted_data=sorted(data.values(),key=lambda x: x.get(sortby,0),reverse=sorted_order)
+    return sorted_data
