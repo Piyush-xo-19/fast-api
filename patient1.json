@@ -1,0 +1,106 @@
+{
+    "P001": {
+        "name": "Ananya Verma",
+        "city": "Guwahati",
+        "age": 28,
+        "gender": "female",
+        "height": 1.65,
+        "weight": 90.0,
+        "bmi": 33.06,
+        "verdict": "Obese",
+        "contact_details": {
+            "phone": "9876543210",
+            "email": "ananya.verma@example.com"
+        },
+        "allergies": [
+            "Peanuts",
+            "Dust"
+        ]
+    },
+    "P002": {
+        "name": "Ravi Mehta",
+        "city": "Mumbai",
+        "age": 35,
+        "gender": "male",
+        "height": 1.75,
+        "weight": 85,
+        "bmi": 27.76,
+        "verdict": "Overweight",
+        "contact_details": {
+            "phone": "9988776655",
+            "email": "ravi.mehta@example.com"
+        },
+        "allergies": [
+            "Shellfish"
+        ]
+    },
+    "P003": {
+        "name": "Sneha Kulkarni",
+        "city": "Pune",
+        "age": 22,
+        "gender": "female",
+        "height": 1.6,
+        "weight": 45,
+        "bmi": 17.58,
+        "verdict": "Underweight",
+        "contact_details": {
+            "phone": "9123456780",
+            "email": "sneha.kulkarni@example.com"
+        },
+        "allergies": []
+    },
+    "P004": {
+        "name": "Arjun Verma",
+        "city": "Mumbai",
+        "age": 40,
+        "gender": "male",
+        "height": 1.8,
+        "weight": 90.0,
+        "bmi": 27.78,
+        "verdict": "Normal",
+        "contact_details": {
+            "phone": "9090909090",
+            "email": "arjun.verma@example.com"
+        },
+        "allergies": [
+            "Pollen",
+            "Penicillin"
+        ]
+    },
+    "P005": {
+        "name": "Neha Sinha",
+        "city": "Kolkata",
+        "age": 30,
+        "gender": "female",
+        "height": 1.55,
+        "weight": 75,
+        "bmi": 31.22,
+        "verdict": "Obese",
+        "contact_details": {
+            "phone": "9876501234",
+            "email": "neha.sinha@example.com"
+        },
+        "allergies": [
+            "Milk",
+            "Gluten"
+        ]
+    },
+    "P006": {
+        "name": "Your Name",
+        "age": 25,
+        "city": "Your City",
+        "gender": "male",
+        "height": 1.72,
+        "weight": 68.0,
+        "bmi": 22.99,
+        "verdict": "Normal",
+        "allergies": [
+            "Peanuts",
+            "Dust"
+        ],
+        "contact_details": {
+            "phone": "9876001122",
+            "email": "your.email@example.com"
+        }
+    }
+}
