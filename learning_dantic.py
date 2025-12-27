@@ -1,5 +1,5 @@
-from pydantic import BaseModel, StrictInt
-from typing import List, Dict
+from pydantic import BaseModel, StrictInt, EmailStr,Field
+from typing import List, Dict,Optional,Annotated
 import json
 
 def load_data():
@@ -11,17 +11,17 @@ def save_data(data):
         json.dump(data, f, indent=4)
 
 class Patient(BaseModel):
-    name: str
-    age: StrictInt   #  prevents strings like "30"
+    name: Annotated[str,Field(max_length=50,examples=["piyush ", "rahul "])]
+    age: Annotated[StrictInt,Field(gt=0)]  #  prevents strings like "30"
     city: str
     gender: str
     height: float
-    weight: float
+    weight: Annotated[float,Field(gt=0 ,lt=120,title="weight of the patient ",description="enter the weight of the patient ",examples=100)]
     bmi: float
     verdict: str
-    allergies: List[str]
+    allergies:Optional[ List[str]]=None
     contact_details: Dict[str, str]
-
+    email :EmailStr 
 
 def insert_patient(patient_info):
     data = load_data()
