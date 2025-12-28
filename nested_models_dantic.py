@@ -29,4 +29,4 @@ print(pateint1)
 
 # Readability: Easier for developers and API consumers to understand
 
-# Validation: Nested models are validated automatically—no extra work needed
+# Validation: Nested models are validated automatically—no extra work needed 
